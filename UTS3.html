@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album Jejak</title>
+    <link rel="stylesheet" href="uts3.css">
+    <link rel="shortcut icon" ; type="images/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: #FF69B4;
+            padding: 10px;
+            display: flex; /* Menggunakan flexbox untuk navbar */
+            justify-content: flex-start; /* Mengatur elemen ke kiri */
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            font-size: 24px;
+        }
+ .dropdown-content {
+            display: none; /* Sembunyikan dropdown secara default */
+            position: absolute;
+            left: 0;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .line {
+            width: 30px;
+            height: 4px;
+            background-color: black;
+            margin: 5px 0;
+        }
+
+        /* Dropdown untuk nested dropdown */
+        .nested-dropdown {
+            position: relative;
+        }
+ .nested-dropdown-content {
+            display: none; /* Sembunyikan dropdown secara default */
+            position: absolute;
+            left: 100%; /* Muncul di sebelah kanan dropdown utama */
+            top: 0; /* Sejajar dengan dropdown utama */
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .nested-dropdown:hover .nested-dropdown-content {
+            display: block; /* Tampilkan nested dropdown saat hover */
+        }
+    </style>
+<body>
+<nav class="navbar">
+    <div class="dropdown nested-dropdown">
+        <button class="dropbtn">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </button> <!-- Tiga titik sebagai tombol dropdown utama -->
+        <div class="dropdown-content">
+            <a href="">Home</a>
+            <div class="dropdown nested-dropdown">
+                <button class="dropbtn">About Us</button>
+                <div class="nested-dropdown-content">
+                    <a href="tentangrizky.html">tentang Rizky Febian</a>
+                    <a href="tentangalbum.html">tentang album</a>
+            </div>
+            <a href="galleryiky.html">Gallery Rizky</a>
+           <a href="infososmed.html">informasi sosmed</a>
+            
+        </div>
+    </div>
+</nav>
+<script>
+    // Menangani klik pada tombol dropdown untuk navigasi
+    document.querySelectorAll('.dropbtn').forEach(button => {
+        button.addEventListener('click', function(event) {
+            event.stopPropagation(); // Mencegah event klik dari menjalar ke elemen lain
+            var dropdownContent = this.nextElementSibling;
+            dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+        });
+    });
+
+    // Menutup dropdown jika klik di luar
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            for (var i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.style.display === 'block') {
+                    openDropdown.style.display = 'none';
+    }
+    }
+</script>
+<header class="header">
+        <div class="sub-title">Selamat Datang di situs kami!</div>
+        <h1>Hi Rizfelous!</h1>
+    </header>
+    <div class="container">
+        <main>
+            <div class="carousel">
+                <h2 >list Album Jejak</h2>
+                <h3>9 songs</h3>
+                <div class="carousel-container">
+                    <div class="carousel-slide">
+                        <img src="images/album.jpg" alt="I'm not ready for another love">
+                        <p>Lagu "I'm Not Ready For Another Love" dari Rizky Febian mengungkapkan perasaan seseorang yang belum siap untuk menjalin hubungan baru setelah mengalamai patah hati atau perpisahan. Secara keseluruhan, lagu ini berbicara tentang trauma emosional dan kesulitan untuk membuka hati kembali setelah kehilangan. Rizky Febian mengungkapkan perasaan kebingungannya, ketakutan akan cinta yang baru, dan kesadaran bahwa dirinya belum siap untuk melangkah ke hubungan yang baru meskipun ada kesempatan untuk itu</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/album.jpg" alt="Nona">
+                        <p>Lagu "Nona" dari Rizky Febian mengisahkan tentang perasaan seorang pria yang jatuh cinta kepada seorang wanita, namun ia merasa ragu dan bimbang dengan perasaan tersebut. Dalam lagu ini, Rizky Febian mencoba untuk menyampaikan perasaan cinta yang tulus, namun disertai dengan keraguan dan ketidakpastian mengenai bagaimana perasaan sang wanita terhadapnya.</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/album.jpg" alt="Reuni">
+                        <p>Lagu "Reuni" ini menggambarkan perasaan haru dan bahagia saat bertemu kembali dengan seseorang yang sangat berarti setelah sekian lama berpisah. Ini bisa diartikan sebagai pertemuan dengan teman lama, mantan kekasih, atau bahkan anggota keluarga. Kesimpulan Secara garis besar, lagu "Reuni" ini adalah sebuah ungkapan perasaan tulus tentang pentingnya hubungan manusia dan kebahagiaan yang bisa didapatkan dari pertemuan kembali dengan orang-orang terkasih.</p>
+                    <div class="carousel-slide">
+                        <img src="images/album.jpg" alt="Ragu">
+                        <p>Lagu "Ragu" dari Rizky Febian adalah sebuah balada yang menceritakan tentang keraguan dalam sebuah hubungan. Sang penyanyi berusaha meyakinkan pasangannya yang merasa ragu akan perasaan cintanya.</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/album.jpg" alt="Pergi Menjauh">
+                        <p>lagu "Pergi Menjauh" adalah sebuah refleksi tentang kompleksitas hubungan manusia. Kadang, kita dihadapkan pada pilihan sulit antara mempertahankan sesuatu yang kita cintai atau melepaskannya demi kebaikan bersama.Intinya, lagu ini ingin menyampaikan pesan bahwa:Perpisahan adalah bagian dari hidup: Tidak semua hubungan bisa bertahan selamanya. Keraguan adalah hal yang wajar: Merasa ragu dalam sebuah hubungan adalah hal yang manusiawi. Menjaga jarak terkadang perlu: Kadang, menjaga jarak adalah cara terbaik untuk menemukan jawaban atas pertanyaan-pertanyaan yang kita miliki.</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/album.jpg" alt="Hanya Engkau">
+                        <p>Lagu "Hanya Engkau" dari Rizky Febian dalam album "Jejak" memiliki makna yang sangat mendalam tentang kesetiaan dan cinta yang abadi. kesimpulannya, lagu "Hanya Engkau" adalah sebuah pernyataan cinta yang tulus dan abadi. Lagu ini mengingatkan kita tentang pentingnya kesetiaan dalam sebuah hubungan. Intinya, lagu ini ingin menyampaikan pesan bahwa: Cinta sejati itu ada: Setiap orang berhak mendapatkan cinta yang tulus dan abadi. Kesetiaan adalah kunci: Kesetiaan adalah fondasi yang kuat untuk membangun hubungan yang langgeng. Ungkapkan perasaanmu: Jangan ragu untuk mengungkapkan perasaan cinta kepada orang yang kamu sayangi.</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/album.jpg" alt="keseriusan">
+                        <p>Lagu "Keseriusan" dari Rizky Febian dalam album "Jejak" adalah sebuah balada yang menyuarakan perasaan kecewa dan sakit hati seseorang yang merasa tidak mendapatkan keseriusan dari pasangannya. lagu "Keseriusan" adalah sebuah refleksi tentang kekecewaan dalam cinta. Lagu ini mengingatkan kita bahwa tidak semua hubungan berjalan sesuai harapan. Intinya, lagu ini ingin menyampaikan pesan bahwa: Kejujuran itu penting: Jika tidak serius, lebih baik jujur dari pada memberikan harapan palsu. Hargai perasaan orang lain: Jangan menyakiti hati orang yang tulus mencintaimu. Jangan takut untuk move on: Jika sebuah hubungan tidak memberikan kebahagiaan, jangan ragu untuk melepaskannya.</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/album.jpg" alt="Menari">
+                        <p>Lagu Menari dari album Jejak Rizky Febian mengisahkan tentang perasaan seseorang yang sedang jatuh cinta, namun diliputi kebingungannya. Meskipun ia merasa terluka dan ada keraguan dalam hubungan tersebut, ia tetap berusaha "menari" atau melanjutkan hidup dengan semangat, meski penuh rasa bimbang. Lagu ini menyampaikan pesan tentang ketulusan perasaan yang tetap berusaha bertahan meski ada ketidakpastian dalam sebuah hubungan.</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/album.jpg" alt="Bahasa Cinta">
+                        <p>Lagu Bahasa Cinta dari album Jejak Rizky Febian berbicara tentang pentingnya komunikasi dalam hubungan, khususnya dalam hal mengungkapkan perasaan cinta. Lagu ini menggambarkan bagaimana seseorang ingin menyampaikan cintanya dengan cara yang tulus, namun merasa kesulitan karena kata-kata tidak selalu cukup untuk mengungkapkan perasaan terdalam. Dalam lagu ini, Rizky menekankan bahwa terkadang, bahasa cinta yang sebenarnya lebih kuat dari kata-kata adalah melalui tindakan dan perasaan yang dapat dirasakan bersama.</p>
+                    </div>
+                    <div>
+                <button class="next" id="nextbutton" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+            <script>
+                let currentSlide = 0; // Indeks slide saat ini
+                const slides = document.querySelectorAll('.carousel-slide'); // Mengambil semua slide
+
+                function showSlide(index) {
+                    // Menghitung indeks slide yang valid
+                    if (index >= slides.length) {
+                        currentSlide = 0; // Kembali ke slide pertama
+                    } else if (index < 0) {
+                        currentSlide = slides.length - 1; // Kembali ke slide terakhir
+                    } else {
+                        currentSlide = index; // Tetap pada indeks yang valid
+                    }
+
+                    // Mengatur transformasi untuk menampilkan slide yang sesuai
+                    const carouselContainer = document.querySelector('.carousel-container');
+                    carouselContainer.style.transform = translateX(-${currentSlide * 100}%);
+                }
+                    function changeSlide(direction) {
+                    showSlide(currentSlide + direction); // Mengubah slide berdasarkan arah
+                }
+        
+
+                // Menampilkan slide pertama saat halaman dimuat
+                showSlide(currentSlide);
+            </script>
+        
+        </main>
+
+        <aside>
+            <section>
+                <h2>Artikel Terbaru</h2>
+                <h3><a href="https://www.bing.com/ck/a?!&&p=ce7b06c7c0294ef15ca8c6fc1d26eb5ff4e04c1d53bacb16d245c032a0c7cdc8JmltdHM9MTczMjU3OTIwMA&ptn=3&ver=2&hsh=4&fclid=172a2505-99ee-6a41-3c32-302b98e06b72&psq=artikel+tentang+lagu+baru+rizky+febian&u=a1aHR0cHM6Ly93d3cua29tcGFzLmNvbS9oeXBlL3JlYWQvMjAyMy8wNy8yNS8xMTA5MTk0NjYvbGlyaWstbGFndS1tZW1iaXN1LWxhZ3UtYmFydS1kYXJpLXJpemt5LWZlYmlhbg&ntb=1">Membisu</a></h3>
+                    <p>Lagu ini menceritakan seseorang yang bertemu dengan pujaan hatinya disaat waktu yang tak terduga. Dia pun sampai tak bisa berkutik ketika berhadapan dengan pujaannya, bahkan merasa malu untuk sekedar menyapa</p>
+                    <a href="https://www.bing.com/ck/a?!&&p=ce7b06c7c0294ef15ca8c6fc1d26eb5ff4e04c1d53bacb16d245c032a0c7cdc8JmltdHM9MTczMjU3OTIwMA&ptn=3&ver=2&hsh=4&fclid=172a2505-99ee-6a41-3c32-302b98e06b72&psq=artikel+tentang+lagu+baru+rizky+febian&u=a1aHR0cHM6Ly93d3cua29tcGFzLmNvbS9oeXBlL3JlYWQvMjAyMy8wNy8yNS8xMTA5MTk0NjYvbGlyaWstbGFndS1tZW1iaXN1LWxhZ3UtYmFydS1kYXJpLXJpemt5LWZlYmlhbg&ntb=1">Read More</a>
+                </article>
+                <article>
+                     <h3><a href="https://www.bing.com/search?q=artikel%20tentang%20lagu%20baru%20rizky%20febian&msbd=%7B%22triggeringMode%22%3A%22Explicit%22%2C%22intent%22%3A%22UserHistory%22%7D&form=BFBBQF&qs=MSB&asig=C935A15B1B944394AAF65245BBF824EE&cvid=1626681f-8101-4513-b129-2ba6e5e59191&sc=4-38&sp=11&ghc=1&lq=0#"></a>Firasat Berbicara</h3>
+                    <p>'Firasat Berbicara' adalah sebuah cerita mengenai perjalanan seseorang yang akhirnya menemukan cinta sejati setelah melalui berbagai fase kekecewaan dan sulit untuk percaya kepada orang lain.</p>
+                    <a href="https://www.bing.com/search?q=artikel%20tentang%20lagu%20baru%20rizky%20febian&msbd=%7B%22triggeringMode%22%3A%22Explicit%22%2C%22intent%22%3A%22UserHistory%22%7D&form=BFBBQF&qs=MSB&asig=C935A15B1B944394AAF65245BBF824EE&cvid=1626681f-8101-4513-b129-2ba6e5e59191&sc=4-38&sp=11&ghc=1&lq=0#">Read More</a>
+                </article>
+                <article>
+                     <h3><a href="https://www.bing.com/search?q=artikel+tentang+lagu+rizky+febian&qs=n&form=QBRE&sp=-1&lq=0&pq=artikel+tentang+lagu+rizky+febian&sc=5-33&sk=&cvid=00BEA98E55004F1FA25E595B06B1A1D7&ghsh=0&ghacc=0&ghpl=#"></a>Makna Cinta</h3>
+                    <p>Lagu yang begitu hits ini punya makna mendalam soal cinta. Makna dalam lagu ini adalah perjalanan cinta yang membutuhkan penantian dan juga usaha keras agar kisah cinta berujung indah.</p>
+                    <a href="https://www.bing.com/search?q=artikel+tentang+lagu+rizky+febian&qs=n&form=QBRE&sp=-1&lq=0&pq=artikel+tentang+lagu+rizky+febian&sc=5-33&sk=&cvid=00BEA98E55004F1FA25E595B06B1A1D7&ghsh=0&ghacc=0&ghpl=#">Read More</a>
+                </article>
+            </section>
+            <h2>Informasi Tambahan</h2>
+                    <p>Widget Jam</p>
+                    <div class="jam-digital">
+                        <div class="kotak">
+                            <p id="jam"></p>
+                        </div>
+                        <div class="kotak">
+                            <p id="menit"></p>
+                        </div>
+                        <div class="kotak">
+                            <p id="detik"></p>
+                        </div>
+                    </div>
+                    <script>
+                        window.setTimeout("waktu()", 1000);
+                     
+                        function waktu() {
+                            var waktu = new Date();
+                            setTimeout("waktu()", 1000);
+                            document.getElementById("jam").innerHTML = waktu.getHours();
+                            document.getElementById("menit").innerHTML = waktu.getMinutes();
+                            document.getElementById("detik").innerHTML = waktu.getSeconds();
+                        }
+                    </script>
+                    <p>Youtube Channel</p>
+                    <iframe width="560" height="315" src="https://youtu.be/vtLWyPVw1jM?si=lvm7c4BSD2PlKz2L" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <p>Spotify</p>
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/3HPCPn1OeQGzC2FIvyBxBi?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                 </section>
+
+                </div>
+            </div>     
+        </aside>
+    </div>
+    <script src="uts3java.js"></script>
+
+    <footer>
+        <p>&copy; 2024 By Ratu Khailifah </p>
+    </footer>
+</body>
+</html>
+
+
+
+
